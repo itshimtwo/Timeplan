@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Listing</title>
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <script src="modernizr.js"></script>
+    <style>
+         body {
+            font-family: 'Lato', sans-serif;
+            margin: 0;
+            padding-top: 80px; /* Add space for the navbar */
+            background-color: #f4f4f4;
+        }
+
+        .navbar {
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-brand img {
+            height: 40px;
+            color: #333;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+            letter-spacing: 1px;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 40px;
+        }
+
+        .product-card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: auto;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .product-card h2 {
+            font-size: 1.5em;
+            margin: 20px 0 10px;
+            padding: 0 20px;
+            color: #444;
+        }
+
+        .product-card .price {
+            font-size: 1.2em;
+            color: #e67e22;
+            padding: 0 20px;
+            margin: 0;
+        }
+
+        .product-card .description {
+            padding: 0 20px;
+            margin: 10px 0;
+            color: #666;
+        }
+
+        .product-card button {
+            display: block;
+            width: calc(100% - 40px);
+            margin: 20px;
+            padding: 10px;
+            background-color: #242633;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .product-card button:hover {
+            background-color: #242633;
+        }
+
+        .navbar-toggler {
+            border: none;
+        }
+
+        .navbar-toggler:focus,
+        .navbar-toggler:active {
+            outline: none;
+            box-shadow: none;
+        }
+
+        .offcanvas-header .btn-close {
+            background: none;
+            border: none;
+        }
+
+        .offcanvas-header .btn-close:focus,
+        .offcanvas-header .btn-close:active {
+            outline: none;
+            box-shadow: none;
+        }
+
+        .navbar-nav .nav-item {
+            margin-right: 15px;
+        }
+
+        @media (max-width: 992px) {
+            .navbar-nav {
+                flex-direction: column;
+                align-items: start;
+            }
+
+            .navbar-nav .nav-item {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="home.html">
+            <img src="logo2.jpg" alt="Logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="home.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="plp.html">Watches</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+    <div class="container">
+        <div class="product-card">
+            <img src="curren8359img1.jpg" alt="Product 1">
+            <h2>Curren 8359</h2>
+            <p class="price">£75</p>
+            <p class="description">CURREN Men's Wristwatch Date Dial Analog Steel Quartz Clock Gold 8359.</p>
+            <a href="curren.html"><button>Buy Now</button></a>
+        </div>
+        <div class="product-card">
+            <img src="erniekimg1.jpg" alt="Product 2">
+            <h2>Ernie Klien Black case</h2>
+            <p class="price">£60</p>
+            <p class="description">ERNIE KLEIN Mens Watches, Brown Leather Watch</p>
+            <a href="ernieklien.html"><button>Buy Now</button></a>
+        </div>
+        <div class="product-card">
+            <img src="curren9007img2.jpg" alt="Product 3">
+            <h2>Curren 9007</h2>
+            <p class="price">£45</p>
+            <p class="description">CURREN 9007 Luxury Women Watch Famous Brands</p>
+            <a href="curren9007.html"><button>Buy Now</button></a>
+        </div>
+        <div class="product-card">
+            <img src="ckimg3.jpg" alt="Product 4">
+            <h2>Calvin Klien</h2>
+            <p class="price">£85</p>
+            <p class="description">Calvin Klein Dress Watch K9H215C6
+            </p>
+            <a href="calvinklien.html"><button>Buy Now</button></a>
+        </div>
+        <div class="product-card">
+          <img src="kenithimg1.JPG" alt="Product 4">
+          <h2>Kenith Cole</h2>
+          <p class="price">£55</p>
+          <p class="description">Kenith Cole dress watch 
+          </p>
+          <a href="kenith.html"><button>Buy Now</button></a>
+      </div>
+      <div class="product-card">
+          <img src="currenc90img2.jpg" alt="Product 4">
+          <h2>Curren C9080L</h2>
+          <p class="price">£35</p>
+          <p class="description">Curren C9080L Quartz Women’s Watch
+          </p>
+          <a href="currenc90.html"><button>Buy Now</button></a>
+      </div>
+    </div>
+    <section id="subscribe" class="container-grid padding-large position-relative overflow-hidden">
+        <div class="container">
+            <div class="row">
+                <div class="subscribe-content bg-dark d-flex flex-wrap justify-content-center align-items-center padding-medium">
+                    <div class="col-md-6 col-sm-12">
+                        <div class="display-header pe-3">
+                            <h2 class="display-7 text-white">
+                                Get 10% off on your first order
+                            </h2>
+                            <p class="text-muted">
+                                Join our newsletter and get news on the latest products, upcoming sales, and more.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <form class="input-group">
+                            <input type="email" class="form-control p-3" placeholder="Enter your email">
+                            <button class="btn btn-outline-light p-3" type="button">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer id="footer" class="overflow-hidden">
+        <div class="container">
+          <div class="row">
+            <div class="footer-top-area">
+              <div class="row d-flex flex-wrap justify-content-between">
+                <div class="col-lg-3 col-sm-6 pb-3">
+                  <div class="footer-menu">
+                    <img src="logo2.jpg" alt="logo">
+                    <p>Time Plan. A company for your fashion looks. Est 2019.</p>
+                    <div class="social-links">
+                      <ul class="d-flex list-unstyled">
+                        <li>
+                          <a href="#">
+                            <svg class="facebook">
+                              <use xlink:href="#facebook" />
+                            </svg>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <svg class="instagram">
+                              <use xlink:href="#instagram" />
+                            </svg>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <svg class="twitter">
+                              <use xlink:href="#twitter" />
+                            </svg>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <svg class="linkedin">
+                              <use xlink:href="#linkedin" />
+                            </svg>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <svg class="youtube">
+                              <use xlink:href="#youtube" />
+                            </svg>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-2 col-sm-6 pb-3">
+                  <div class="footer-menu text-uppercase">
+                    <h5 class="widget-title pb-2">Quick Links</h5>
+                    <ul class="menu-list list-unstyled text-uppercase">
+                      <li class="menu-item pb-2">
+                        <a href="home.html">Home</a>
+                      </li>
+                      <li class="menu-item pb-2">
+                        <a href="about.html">About</a>
+                      </li>
+                      <li class="menu-item pb-2">
+                        <a href="plp.html">Shop</a>
+                      </li>
+                      <li class="menu-item pb-2">
+                        <a href="#">Blogs</a>
+                      </li>
+                      <li class="menu-item pb-2">
+                        <a href="contact.html">Contact</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 pb-3">
+                  <div class="footer-menu text-uppercase">
+                    <h5 class="widget-title pb-2">Help & Info Help</h5>
+                    <ul class="menu-list list-unstyled">
+                      
+                      <li class="menu-item pb-2">
+                        <a href="#">Returns Policies</a>
+                      </li>
+                      <li class="menu-item pb-2">
+                        <a href="#">Shipping + Delivery</a>
+                      </li>
+                      <li class="menu-item pb-2">
+                        <a href="contact.html">Contact Us</a>
+                      </li>
+                      
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 pb-3">
+                  <div class="footer-menu contact-item">
+                    <h5 class="widget-title text-uppercase pb-2">Contact Us</h5>
+                    
+                    <p>If you need support? Just give us a call. <a href="">+44 7851996422</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr>
+      </footer>
+      <div id="footer-bottom">
+        <div class="container">
+          <div class="row d-flex flex-wrap justify-content-between">
+            <div class="col-md-4 col-sm-6">
+              <div class="Shipping d-flex">
+                <p>We ship with:</p>
+                <div class="card-wrap ps-2">
+                  <img src="dhl.png" alt="visa">
+                  <img src="shippingcard.png" alt="mastercard">
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+              <div class="payment-method d-flex">
+                <p>Payment options:</p>
+                <div class="card-wrap ps-2">
+                  <img src="visa.jpg" alt="visa">
+                  <img src="mastercard.jpg" alt="mastercard">
+                  <img src="paypal.jpg" alt="paypal">
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+              <div class="copyright">
+                <p>© Copyright 2024 TimePlan. Design by <a href="">WebVision</a> Secured by CLOUDFLARE</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <script src="bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
